@@ -31,6 +31,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 2.1"
+# image_processing 2.x no longer bundles a libvips binding
+gem "ruby-vips", "~> 2.0"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
@@ -44,6 +46,24 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # RSpec for Rails [https://github.com/rspec/rspec-rails]
+  gem "rspec-rails", "~> 8.0"
+
+  # Fixtures replacement with a straightforward definition syntax [https://github.com/thoughtbot/factory_bot_rails]
+  gem "factory_bot_rails"
+
+  # Generate fake data for tests [https://github.com/faker-ruby/faker]
+  gem "faker"
+
+  # RSpec-specific RuboCop cops [https://github.com/rubocop/rubocop-rspec]
+  gem "rubocop-rspec", require: false
+
+  # Code coverage for Ruby [https://github.com/simplecov-ruby/simplecov]
+  gem "simplecov", require: false
+
+  # One-liner matchers for common Rails functionality [https://github.com/thoughtbot/shoulda-matchers]
+  gem "shoulda-matchers"
 end
 
 group :development do
