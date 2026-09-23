@@ -1,2 +1,3 @@
 [tools]
+aws = { version = "latest", symlink_bins = "true" }
 ruby = "4.0.6"
